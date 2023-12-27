@@ -1,0 +1,246 @@
+* {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-primary-color {
+    background-color: #fff;
+}
+
+.bg-secondary-color {
+    background-color: #ece8ea;
+}
+
+.bg-dark-color {
+    background-color: #050505;
+}
+
+.primary-color {
+    color: #050505;
+}
+
+.secondary-color {
+    color: #7a7a7a;
+}
+
+
+body {
+    min-height: 110vh;
+    background: black;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+}
+
+.bubbles span {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background: #9b9797;
+    margin: 0 0px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 10px #A9A9A9,
+    0 0 50px #A9A9A9,
+    0 0 100px #A9A9A9;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(100s / var(--i));
+}
+.bubbles span:nth-child(even) {
+    background: #696969;
+    box-shadow: 0 0 0 10px #696969,
+    0 0 50px #696969,
+    0 0 100px #696969;
+}
+@keyframes animate {
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-5vh) scale(1);
+    }
+}
+
+/*NAVBAR*/
+#navbar {
+    border-bottom: 1px solid #7a7a7a;
+    background: #050505;
+}
+
+#navbar a:hover {
+    color: #7a7a7a;
+}
+
+#navbar a.active {
+    border-bottom: 1px solid white;
+}
+
+#navbar a {
+    color: white;
+}
+
+.navbar-brand {
+    display: flex;
+}
+
+.navbar-brand img {
+    width: 40px;
+}
+
+.navbar-brand span {
+    color: white;
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-left: 0.5em;
+}
+
+#navbar-items .navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#navbar-items .nav-item {
+    margin: 0 1em;
+}
+
+/*SLIDER*/
+#slider {
+    margin-top: 8em;
+    margin-bottom: 1em;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+#slider .btn {
+    padding: 0.3 0.8em;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.carousel-item img {
+    width: 400px;
+    height: 400px;
+}
+
+.carousel-control-prev i,
+.carousel-control-next i {
+    color: #111;
+    font-size: 3em;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #222;
+    opacity: 0.8;
+}
+
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+@media(min-width: 768px) {
+
+    .bubbles {
+        position: relative;
+        display: flex;
+    }
+    
+    .bubbles span {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: #9b9797;
+        margin: 0 4px;
+        border-radius: 100%;
+        box-shadow: 0 0 0 10px #A9A9A9,
+        0 0 50px #A9A9A9,
+        0 0 100px #A9A9A9;
+        animation: animate 15s linear infinite;
+        animation-duration: calc(100s / var(--i));
+    }
+    .bubbles span:nth-child(even) {
+        background: #696969;
+        box-shadow: 0 0 0 10px #696969,
+        0 0 50px #696969,
+        0 0 100px #696969;
+    }
+    @keyframes animate {
+        0%
+        {
+            transform: translateY(100vh) scale(0);
+        }
+        100%
+        {
+            transform: translateY(-5vh) scale(1);
+        }
+    }
+
+    .carousel-item img {
+        width: 1000px;
+        height: 700px;
+    }
+    
+    #slider .carousel-caption {
+        align-items: center;
+        bottom: 15em;
+    }
+
+    #slider .carousel-caption h5 {
+        font-size: 4em;
+        text-shadow: #000 2px 3px;
+    }
+
+    #slider .btn {
+        padding: 0.6 1.6em;
+        font-size: 1.2em;
+    }
+
+    .carousel-indicators {
+        bottom: 7em;
+    }
+}
+
+/*MINI BANNERS*/
+#mini-banners {
+    border-radius: 60%;
+    margin-bottom: 4em;
+}
+
+#mini-banners .card {
+    padding: 2em 0.3em;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 1em;
+}
+
+#mini-banners i {
+    font-size: 4em;
+}
+
+#mini-banners .card-title {
+    margin-bottom: 1.5em;
+}
+
+#mini-banners .btn {
+    margin-top: 1.5em;
+    padding: 0.6em 1.2em;
+}
+
+@media(min-width: 768px) {
+    #mini-banners {
+        margin-top: -6em;
+    }
+    #mini-banners .card {
+        width: 350px;
+        height: 650px;
+        padding: 2em 0.3em;
+        border-radius: 10px 10px 10px 10px;
+        margin-bottom: 1em;
+    }
+}
